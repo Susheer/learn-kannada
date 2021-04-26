@@ -2,15 +2,18 @@ import React,{useState} from 'react';
 import "./App.css";
 import FloatingButton from "./components/floating-button";
 import Navbar from "./components/navbar";
-import { a,mapping } from "./images";
+import {mapping,mappHindi } from "./images";
 
 function App() {
 
 const [index,setIndex]=useState(0);
-const [pic,setPIC]=useState({a:a});
+const [pic,setPIC]=useState(mapping[0]);
 const [show,setShow]=useState(false);
 let key=Object.keys(pic)[0];
-
+let question=(<div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+  <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'9px 20px'}}>{key}</h1>
+  <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'0px 32px'}}>{mappHindi[key]}</h1>
+</div>)
   return (
     <>
       <Navbar />
@@ -32,9 +35,8 @@ let key=Object.keys(pic)[0];
                   >
                     {
                       show?
-                    <img className="center-align"  src={pic[key]} alt="ans" style={{height:'100px',width:'100px'}}/>
-                    :
-                    <h1 className="center-align pulse" style={{textTransform:'capitalize'}}>{key}</h1>
+                      <h1 className="center-align pulse" style={{textTransform:'capitalize'}}>{pic[key]}</h1>
+                    :question
 }
                   </div>
                 </div>
@@ -61,6 +63,7 @@ let key=Object.keys(pic)[0];
             }}>
               Next Question <i class="material-icons right">arrow_forward</i>
             </a>
+           
           </div>
         </div>
       </div>
