@@ -14,6 +14,10 @@ let question=(<div style={{display:'flex',justifyContent:'space-between',alignIt
   <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'9px 20px'}}>{key}</h1>
   <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'0px 32px'}}>{mappHindi[key]}</h1>
 </div>)
+let answer=(<div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+<h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'9px 20px'}}>{pic[key]}</h1>
+<h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'0px 32px'}}>{mappHindi[key]}</h1>
+</div>)
   return (
     <>
       <Navbar />
@@ -35,7 +39,7 @@ let question=(<div style={{display:'flex',justifyContent:'space-between',alignIt
                   >
                     {
                       show?
-                      <h1 className="center-align pulse" style={{textTransform:'capitalize'}}>{pic[key]}</h1>
+                      answer
                     :question
 }
                   </div>
