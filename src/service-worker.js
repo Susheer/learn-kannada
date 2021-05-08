@@ -91,3 +91,7 @@ self.addEventListener('appinstalled', () => {
   // Optionally, send analytics event to indicate successful install
   console.log('PWA was installed');
 });
+console.debug("Servicie->self",self)
+console.debug("Servicie->window",window)
+console.debug("Servicie->navigator",navigator)
+;
