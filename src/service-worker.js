@@ -70,3 +70,17 @@ self.addEventListener('message', (event) => {
 });
 
 // Any other custom service worker logic can go here.
+
+window.addEventListener('beforeinstallprompt',(e)=> {
+  alert("hello you want to install this app")
+try{
+
+  e.usersChoise.then(choiseResult=>{
+    console.log("ChoiseResult",choiseResult);
+  })
+}catch(err){
+  console.debug("Choise error",err);
+}
+  
+
+})
