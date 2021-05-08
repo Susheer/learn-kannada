@@ -1,12 +1,15 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import "./App.css";
 import FloatingButton from "./components/floating-button";
 import Navbar from "./components/navbar";
+import * as M from "materialize-css/dist/js/materialize.min.js"
 import {mapping,mappHindi } from "./images";
-
 function App() {
-
-const [index,setIndex]=useState(0);
+  useEffect(()=>{
+      var elems = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elems);
+     
+  },[])
 const [pic,setPIC]=useState(mapping[0]);
 const [show,setShow]=useState(false);
 let key=Object.keys(pic)[0];
@@ -22,13 +25,13 @@ let answer=(<div style={{display:'flex',justifyContent:'space-between',alignItem
     <>
       <Navbar />
 
-      <div class="section">
-        <div class="container">
-          <div class="row" style={{ marginTop: "15%" }}>
-            <div class="col s12 m2"></div>
-            <div class="col s12 m8 ">
-              <div class="card">
-                <div class="card-content">
+      <div className="section">
+        <div className="container">
+          <div className="row" style={{ marginTop: "15%" }}>
+            <div className="col s12 m2"></div>
+            <div className="col s12 m8 ">
+              <div className="card">
+                <div className="card-content">
                   <div
                     style={{
                       display: "flex",
@@ -46,7 +49,7 @@ let answer=(<div style={{display:'flex',justifyContent:'space-between',alignItem
                 </div>
               </div>
             </div>
-            <div class="col s12 m2"></div>
+            <div className="col s12 m2"></div>
           </div>
           <br />
           <br />
@@ -59,13 +62,13 @@ let answer=(<div style={{display:'flex',justifyContent:'space-between',alignItem
               marginTop: "5%",
             }}
           >
-            <a class="waves-effect waves-light btn-large  indigo z-depth-5" onClick={()=>{
+            <a className="waves-effect waves-light btn-large  indigo z-depth-5" onClick={()=>{
               let num=Math.floor(Math.random()*mapping.length);
               
               setPIC(mapping[num])
 
             }}>
-              Next Question <i class="material-icons right">arrow_forward</i>
+              Next Question <i className="material-icons right">arrow_forward</i>
             </a>
            
           </div>

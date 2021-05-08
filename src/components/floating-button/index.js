@@ -1,10 +1,10 @@
 const FloatingButton = ({state,showPic}) => {
   return (
-    <div class="fixed-action-btn">
-      <a class="btn-floating btn-large indigo" onClick={()=>{
+    <div className="fixed-action-btn">
+      <a className="btn-floating btn-large indigo" onClick={()=>{
         showPic(!state);
       }}>
-        <i class="large material-icons">remove_red_eye</i>
+        <i className="large material-icons">remove_red_eye</i>
       </a>
     </div>
   );
