@@ -71,8 +71,8 @@ self.addEventListener('message', (event) => {
 
 // Any other custom service worker logic can go here.
 
-window.addEventListener('beforeinstallprompt',(e)=> {
-  alert("hello you want to install this app")
+self.addEventListener('beforeinstallprompt',(e)=> {
+  
 try{
 
   e.usersChoise.then(choiseResult=>{
