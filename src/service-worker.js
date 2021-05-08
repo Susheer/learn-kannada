@@ -71,16 +71,23 @@ self.addEventListener('message', (event) => {
 
 // Any other custom service worker logic can go here.
 
-self.addEventListener('beforeinstallprompt',(e)=> {
+// self.addEventListener('beforeinstallprompt',(e)=> {
   
-try{
-
-  e.usersChoise.then(choiseResult=>{
-    console.log("ChoiseResult",choiseResult);
-  })
-}catch(err){
-  console.debug("Choise error",err);
-}
+// try{
+//   e.usersChoise.then(choiseResult=>{
+//     console.log("ChoiseResult",choiseResult);
+//   })
+// }catch(err){
+//   console.debug("Choise error",err);
+// }
   
 
-})
+// })
+window.addEventListener('appinstalled', () => {
+  // Hide the app-provided install promotion
+
+  // Clear the deferredPrompt so it can be garbage collected
+
+  // Optionally, send analytics event to indicate successful install
+  console.log('PWA was installed');
+});
