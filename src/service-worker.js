@@ -83,7 +83,7 @@ self.addEventListener('message', (event) => {
   
 
 // })
-self.addEventListener('appinstalled', () => {
+self.window.addEventListener('appinstalled', () => {
   // Hide the app-provided install promotion
 
   // Clear the deferredPrompt so it can be garbage collected
@@ -91,7 +91,4 @@ self.addEventListener('appinstalled', () => {
   // Optionally, send analytics event to indicate successful install
   console.debug('PWA was installed');
 });
-console.debug("Servicie->self",self)
-console.debug("Servicie->window",window)
-console.debug("Servicie->navigator",navigator)
-;
+console.debug("Servicie->self",self);
