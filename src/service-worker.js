@@ -83,7 +83,7 @@ self.addEventListener('message', (event) => {
   
 
 // })
-self.window.addEventListener('appinstalled', (e) => {
+self.addEventListener('appinstalled', (e) => {
   // Hide the app-provided install promotion
 
   // Clear the deferredPrompt so it can be garbage collected
