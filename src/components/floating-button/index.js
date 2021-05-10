@@ -1,11 +1,12 @@
+import Link from "../re-useable/link"
 const FloatingButton = ({state,showPic}) => {
   return (
     <div className="fixed-action-btn">
-      <a className="btn-floating btn-large indigo" onClick={()=>{
+      <Link className="btn-floating btn-large indigo" onClick={()=>{
         showPic(!state);
       }}>
         <i className="large material-icons">remove_red_eye</i>
-      </a>
+      </Link>
     </div>
   );
 };

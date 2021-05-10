@@ -1,50 +1,52 @@
+import UserView from "../user-view"
+import Link from "../re-useable/link"
 const Navbar = () => {
   return (
     <>
       <ul id="slide-out" className="sidenav">
         <li>
-          <div className="user-view">
-            <div className="background">
-              <img src="https://materializecss.com/images/office.jpg" />
+          <UserView title="Learn Kannada" email={"kannada@gmail.com"}/>
+          </li>
+        <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <Link className="collapsible-header">
+            Dropdown<i class="material-icons">arrow_drop_down</i></Link>
+            <div class="collapsible-body">
+              <ul>
+                <li><Link url="/">First</Link></li>
+                <li><Link url="/">Second</Link></li>
+                <li><Link url="/">Third</Link></li>
+                <li><Link url="/">Fourth</Link></li>
+              </ul>
             </div>
-            <a href="#user">
-              <img
-                alt="user name"
-                className="circle"
-                src="https://materializecss.com/images/yuna.jpg"
-              />
-            </a>
-            <a href="#name">
-              <span className="white-text name">John Doe</span>
-            </a>
-            <a href="#email">
-              <span className="white-text email">jdandturk@gmail.com</span>
-            </a>
-          </div>
-        </li>
+          </li>
+        </ul>
+      </li>
         <li>
-          <a href="#!">
+          <Link url="/">
             <i className="material-icons">cloud</i>First Link With Icon
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#!">Second Link</a>
+          <Link url="/">Second Link</Link>
         </li>
         <li>
           <div className="divider"></div>
         </li>
         <li>
-          <a className="subheader">Subheader</a>
+          <Link className="subheader">Subheader</Link>
         </li>
         <li>
-          <a className="waves-effect" href="#!">
+          <Link className="waves-effect" url="/">
             Third Link With Waves
-          </a>
+          </Link>
         </li>
+
       </ul>
-      <a href="#" data-target="slide-out" className="sidenav-trigger">
+      <Link url="/" dataTarget="slide-out" className="sidenav-trigger">
         <i className="material-icons">menu</i>
-      </a>
+      </Link>
     </>
   );
 };

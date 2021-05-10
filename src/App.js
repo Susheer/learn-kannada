@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from 'react';
+import Link from "./components/re-useable/link"
 import "./App.css";
 import FloatingButton from "./components/floating-button";
 import Navbar from "./components/navbar";
@@ -8,6 +9,8 @@ function App() {
   useEffect(()=>{
       var elems = document.querySelectorAll('.sidenav');
       M.Sidenav.init(elems);
+      var collapsible = document.querySelectorAll('.collapsible');
+       M.Collapsible.init(collapsible);
      
   },[])
 const [pic,setPIC]=useState(mapping[0]);
@@ -62,14 +65,12 @@ let answer=(<div style={{display:'flex',justifyContent:'space-between',alignItem
               marginTop: "5%",
             }}
           >
-            <a className="waves-effect waves-light btn-large  indigo z-depth-5" onClick={()=>{
+            <Link className="waves-effect waves-light btn-large  indigo z-depth-5" onClick={()=>{
               let num=Math.floor(Math.random()*mapping.length);
-              
               setPIC(mapping[num])
-
-            }}>
+            }} url="/">
               Next Question <i className="material-icons right">arrow_forward</i>
-            </a>
+            </Link>
            
           </div>
         </div>
