@@ -1,15 +1,16 @@
 import Link from "../re-useable/link"
+import UserPic from "../../assets/images/user.jpg"
 function userView(props) {
   return (
     <div className="user-view">
       <div className="background">
-        <img alt={"logo"} src="https://materializecss.com/images/office.jpg" />
+        <img alt={"background"} style={{width: "100%"}} src="http://www.allwhitebackground.com/images/7/Material-Design-Background-Image.png" />
       </div>
       <Link url="/user">
         <img
           alt="user name"
           className="circle"
-          src="https://materializecss.com/images/yuna.jpg"
+          src={UserPic}
         />
       </Link>
       <Link url="/name">
