@@ -1,10 +1,11 @@
 import Link from "../re-useable/link"
-import UserPic from "../../assets/images/user.jpg"
+import UserPic from "../../assets/images/user.jpg" 
+import BgPic from "../../assets/images/mda-bg.png" 
 function userView(props) {
   return (
     <div className="user-view">
       <div className="background">
-        <img alt={"background"} style={{width: "100%"}} src="http://www.allwhitebackground.com/images/7/Material-Design-Background-Image.png" />
+        <img alt={"background"} style={{width: "100%"}} src={BgPic} />
       </div>
       <Link url="/user">
         <img
