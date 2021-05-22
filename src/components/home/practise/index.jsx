@@ -1,5 +1,11 @@
+import {useHistory} from 'react-router-dom';
 import IteamButton from '../../buttons/card-button';
+
 const Practise = () => {
+  var history=useHistory();
+  const navigate=(route)=>{
+    history.push(route);
+  }
   return (
     <div className="container">
       <div className="divider"></div>
@@ -15,7 +21,7 @@ const Practise = () => {
       <div className="section item-container">
         <div className="row">
         <div className="col s6 m6">
-        <IteamButton title="Vowel" icon="extension"/>
+        <IteamButton title="Vowel" icon="extension" onClick={navigate.bind(this,"/practise/vowel")}/>
         </div>
           <div className="col s6 m6">
           <IteamButton title="Constants" icon="bubble_chart"/>

@@ -35,6 +35,11 @@ function Item(props){
           onMouseOut={()=>{
             setActive(false)
           }}
+          onClick={()=>{
+            if(props.onClick){
+              props.onClick();
+            }
+          }}
           class={cardClasses}
           style={cardStyle}
         >

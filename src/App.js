@@ -1,7 +1,8 @@
-import React,{useEffect, useState} from 'react';
+import React,{useEffect} from 'react';
 import {Switch,Route} from 'react-router-dom'
 import Home from "./components/home"
 import Practise from "./components/home/practise"
+import PractiseVowel from "./components/home/practise/vowel"
 import "./App.css";
 import Navbar from "./components/navbar";
 import * as M from "materialize-css/dist/js/materialize.min.js"
@@ -23,6 +24,7 @@ function App() {
       <Route path="/Vowels" exact component={Vowels}/>
       <Route path="/Constents" exact component={Constents}/>
       <Route path="/Practise" exact component={Practise}/>
+      <Route path="/practise/vowel" exact component={PractiseVowel}/>
     </Switch>
      </>
   )

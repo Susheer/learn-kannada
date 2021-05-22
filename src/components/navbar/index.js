@@ -75,7 +75,7 @@ const Navbar = (props) => {
         </Link>
         </li>
       </ul>
-      <Link url="/" dataTarget="slide-out" className="sidenav-trigger">
+      <Link  dataTarget="slide-out" className="sidenav-trigger">
         <i className="material-icons" style={{ fontSize: "34px" }}>
           menu
         </i>
