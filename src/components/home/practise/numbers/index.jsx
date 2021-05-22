@@ -5,16 +5,14 @@ function App() {
     const getNumber=()=>{
         return Math.floor(Math.random()* numbers.length)
     }
-const [pic,setPIC]=useState(numbers[0]);
+const [number,setnumber]=useState(numbers[0]);
+const [index,setIndex]=useState(0);
 const [show,setShow]=useState(false);
-let key=Object.keys(pic)[0];
 let question=(<div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-  <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'9px 20px'}}>{"kassaco"}</h1>
-  <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'0px 32px'}}>{mappHindi[key]}</h1>
+  <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'9px 20px'}}>{index}</h1>
 </div>)
 let answer=(<div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-<h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'9px 20px'}}>{pic[key]}</h1>
-<h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'0px 32px'}}>{mappHindi[key]}</h1>
+<h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'9px 20px'}}>{number}</h1>
 </div>)
   return (
     <>
@@ -55,8 +53,9 @@ let answer=(<div style={{display:'flex',justifyContent:'space-between',alignItem
             }}
           >
             <button className="waves-effect waves-light btn-large  indigo z-depth-5" onClick={()=>{
-              let num=Math.floor(Math.random()*mapping.length);
-              setPIC(mapping[num])
+              let newIndex=getNumber();
+              setIndex(newIndex);
+              setnumber(numbers[newIndex])
             }}>
               Next Question <i className="material-icons right">arrow_forward</i>
             </button>
