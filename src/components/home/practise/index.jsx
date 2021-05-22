@@ -1,6 +1,5 @@
 import {useHistory} from 'react-router-dom';
 import IteamButton from '../../buttons/card-button';
-
 const Practise = () => {
   var history=useHistory();
   const navigate=(route)=>{
@@ -30,9 +29,8 @@ const Practise = () => {
           <IteamButton title="Numbers" icon="local_library" onClick={navigate.bind(this,"/practise/number")}/>
         </div>
         <div className="col s6 m6">
-        <IteamButton title="All" icon="local_library"/>
+        <IteamButton title="All" icon="local_library" onClick={navigate.bind(this,"/practise/all")}/>
       </div>
-         
         </div>
       </div>
       <div className="section item-container">
