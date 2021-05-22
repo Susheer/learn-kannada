@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState } from "react"; 
+
 
 function Item(props){
    const [active,setActive] =useState(false)
     let color=null;
     let cardStyle={
-        width: "70%",
+        width: "100%",
         height: "125px",
         borderRadius: "10px",
         display: "flex",
@@ -19,7 +20,6 @@ function Item(props){
     }
     else{
         cardStyle.backgroundColor="#e3e9f1"
-
     }
     return (
       <div
@@ -31,8 +31,15 @@ function Item(props){
         <div
         onMouseOver={()=>{
             setActive(true)
+            
+          }}
+          onClick={()=>{
+            if(props.navigateTo){
+              props.navigateTo();
+            }
           }}
           onMouseOut={()=>{
+           
             setActive(false)
           }}
           class={cardClasses}

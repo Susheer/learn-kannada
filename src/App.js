@@ -1,6 +1,7 @@
 import React,{useEffect, useState} from 'react';
 import {Switch,Route} from 'react-router-dom'
 import Home from "./components/home"
+import Practise from "./components/home/practise"
 import "./App.css";
 import Navbar from "./components/navbar";
 import * as M from "materialize-css/dist/js/materialize.min.js"
@@ -13,13 +14,15 @@ function App() {
      
   },[])
 
+ 
   return (
     <>
     <Navbar/>
-    <Switch>
+    <Switch> 
       <Route path="/" exact component={Home}/>
       <Route path="/Vowels" exact component={Vowels}/>
       <Route path="/Constents" exact component={Constents}/>
+      <Route path="/Practise" exact component={Practise}/>
     </Switch>
      </>
   )

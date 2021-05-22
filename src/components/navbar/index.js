@@ -1,6 +1,14 @@
 import UserView from "../user-view";
+import {useHistory} from "react-router-dom"
 import Link from "../re-useable/link";
-const Navbar = () => {
+const Navbar = (props) => {
+  var history=useHistory();
+  var enableBack=false;
+  if(history.location.length>4){
+    enableBack=true;
+  }
+
+  console.debug("history",history.location);
   return (
     <div className="container">
       <ul id="slide-out" className="sidenav">
@@ -72,6 +80,17 @@ const Navbar = () => {
           menu
         </i>
       </Link>
+      {
+        enableBack?
+      
+      <button class="btn waves-effect waves-light" type="submit" name="action" onClick={(e)=>{
+        e.preventDefault();
+        history.goBack();
+        console.debug("props",props);
+      }}>Back
+    <i class="material-icons right">send</i>
+  </button>:null}
+    
     </div>
   );
 };

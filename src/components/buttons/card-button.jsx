@@ -4,7 +4,7 @@ function Item(props){
    const [active,setActive] =useState(false)
     let color=null;
     let cardStyle={
-        width: "70%",
+        width: "100%",
         height: "125px",
         borderRadius: "10px",
         display: "flex",
