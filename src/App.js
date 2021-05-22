@@ -4,6 +4,7 @@ import Home from "./components/home"
 import Practise from "./components/home/practise"
 import PractiseVowel from "./components/home/practise/vowel"
 import PractiseNumber from "./components/home/practise/numbers"
+import PractiseConstants from "./components/home/practise/constants"
 import "./App.css";
 import Navbar from "./components/navbar";
 import * as M from "materialize-css/dist/js/materialize.min.js"
@@ -27,6 +28,7 @@ function App() {
       <Route path="/Practise" exact component={Practise}/>
       <Route path="/practise/vowel" exact component={PractiseVowel}/>
       <Route path="/practise/number" exact component={PractiseNumber}/>
+      <Route path="/practise/constants" exact component={PractiseConstants}/>
     </Switch>
      </>
   )

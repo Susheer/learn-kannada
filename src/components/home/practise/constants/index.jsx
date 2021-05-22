@@ -1,18 +1,18 @@
-import React,{ useState} from 'react';
-import {numbers } from "../../../../store";
+import React,{useEffect, useState} from 'react';
+import Link from "../../../re-useable/link"
+import {constants,constantsHindi } from "../../../../store";
 import FloatingButton  from "../../../floating-button";
 function App() {
-    const getNumber=()=>{
-        return Math.floor(Math.random()* numbers.length)
-    }
-const [number,setnumber]=useState(numbers[0]);
-const [index,setIndex]=useState(0);
+const [pic,setPIC]=useState(constants[0]);
 const [show,setShow]=useState(false);
+let key=Object.keys(pic)[0];
 let question=(<div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-  <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'9px 20px'}}>{index}</h1>
+  <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'9px 20px'}}>{key}</h1>
+  <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'0px 32px'}}>{constantsHindi[key]}</h1>
 </div>)
 let answer=(<div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-<h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'9px 20px'}}>{number}</h1>
+<h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'9px 20px'}}>{pic[key]}</h1>
+<h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'0px 32px'}}>{constantsHindi[key]}</h1>
 </div>)
   return (
     <>
@@ -53,9 +53,8 @@ let answer=(<div style={{display:'flex',justifyContent:'space-between',alignItem
             }}
           >
             <button className="waves-effect waves-light btn-large  indigo z-depth-5" onClick={()=>{
-              let newIndex=getNumber();
-              setIndex(newIndex);
-              setnumber(numbers[newIndex])
+              let num=Math.floor(Math.random()*constants.length);
+              setPIC(constants[num])
             }}>
               Next Question <i className="material-icons right">arrow_forward</i>
             </button>

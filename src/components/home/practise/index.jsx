@@ -24,8 +24,8 @@ const Practise = () => {
         <IteamButton title="Vowel" icon="extension" onClick={navigate.bind(this,"/practise/vowel")}/>
         </div>
           <div className="col s6 m6">
-          <IteamButton title="Constants" icon="bubble_chart"/>
-          </div>
+          <IteamButton title="Constants" icon="bubble_chart" onClick={navigate.bind(this,"/practise/constants")}/>
+          </div> 
           <div className="col s6 m6">
           <IteamButton title="Numbers" icon="local_library" onClick={navigate.bind(this,"/practise/number")}/>
         </div>
