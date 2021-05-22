@@ -20,7 +20,7 @@ const Home = () => {
       <div className="section item-container">
         <div className="row">
         <div className="col s12">
-        <Item title="Learn" icon="extension"/>
+        <Item title="Learn" icon="extension" navigateTo={onClickButton.bind(this,"/Learn")}/>
         </div>
           <div className="col s12">
           <Item title="Practise" icon="bubble_chart" navigateTo={onClickButton.bind(this,"/Practise")}/>
