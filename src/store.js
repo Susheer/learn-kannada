@@ -1,4 +1,4 @@
-var mapping=[
+var vowel=[
     {a:'ಅ'},
     {aa:'ಆ'},
     {e:'ಇ'},
@@ -16,7 +16,7 @@ var mapping=[
     {aha:'ಅಃ'}
 ]
 
-var mappHindi={
+var vowelHindi={
     a:'अ',
     aa:'आ',
     e:'इ',
@@ -32,7 +32,6 @@ var mappHindi={
     ow:'औ',
     am:'अं',
     aha:'अः'
-
 }
 
 //0,1,2,3,4,5,6,7,8,9,10
@@ -63,6 +62,6 @@ var numbers=[
 
 
 
-export {mapping,mappHindi,numbers}
+export {vowel,vowelHindi,numbers}
 
 

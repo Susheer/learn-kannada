@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react';
-import {mapping,mappHindi,numbers } from "../../../../store";
+import {numbers } from "../../../../store";
 import FloatingButton  from "../../../floating-button";
 function App() {
     const getNumber=()=>{

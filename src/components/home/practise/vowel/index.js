@@ -1,18 +1,18 @@
 import React,{useEffect, useState} from 'react';
 import Link from "../../../re-useable/link"
-import {mapping,mappHindi } from "../../../../store";
+import {vowel,vowelHindi } from "../../../../store";
 import FloatingButton  from "../../../floating-button";
 function App() {
-const [pic,setPIC]=useState(mapping[0]);
+const [pic,setPIC]=useState(vowel[0]);
 const [show,setShow]=useState(false);
 let key=Object.keys(pic)[0];
 let question=(<div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
   <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'9px 20px'}}>{key}</h1>
-  <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'0px 32px'}}>{mappHindi[key]}</h1>
+  <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'0px 32px'}}>{vowelHindi[key]}</h1>
 </div>)
 let answer=(<div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
 <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'9px 20px'}}>{pic[key]}</h1>
-<h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'0px 32px'}}>{mappHindi[key]}</h1>
+<h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'0px 32px'}}>{vowelHindi[key]}</h1>
 </div>)
   return (
     <>
@@ -53,8 +53,8 @@ let answer=(<div style={{display:'flex',justifyContent:'space-between',alignItem
             }}
           >
             <button className="waves-effect waves-light btn-large  indigo z-depth-5" onClick={()=>{
-              let num=Math.floor(Math.random()*mapping.length);
-              setPIC(mapping[num])
+              let num=Math.floor(Math.random()*vowel.length);
+              setPIC(vowel[num])
             }}>
               Next Question <i className="material-icons right">arrow_forward</i>
             </button>
