@@ -34,10 +34,25 @@ var mappHindi={
     aha:'अः'
 
 }
+
+
+var numbers=[
+    "೦",
+    "೧",
+    "೨",
+    "೩",
+    "೪",
+    "೫",
+    "೬",
+    "೭",
+    "೮",
+    "೯",
+    "೧೦"
+]
     
 
 
 
-export {mapping,mappHindi}
+export {mapping,mappHindi,numbers}
 
 

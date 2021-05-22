@@ -27,7 +27,7 @@ const Practise = () => {
           <IteamButton title="Constants" icon="bubble_chart"/>
           </div>
           <div className="col s6 m6">
-          <IteamButton title="Numbers" icon="local_library"/>
+          <IteamButton title="Numbers" icon="local_library" onClick={navigate.bind(this,"/practise/number")}/>
         </div>
         <div className="col s6 m6">
         <IteamButton title="All" icon="local_library"/>

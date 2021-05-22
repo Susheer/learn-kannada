@@ -1,13 +1,15 @@
 import React,{useEffect, useState} from 'react';
-import Link from "../../../re-useable/link"
-import {mapping,mappHindi } from "../../../../store";
+import {mapping,mappHindi,numbers } from "../../../../store";
 import FloatingButton  from "../../../floating-button";
 function App() {
-const [pic,setPIC]=useState(mapping[0]);
+    const getNumber=()=>{
+        return Math.floor(Math.random()* numbers.length)
+    }
+const [pic,setPIC]=useState(numbers[0]);
 const [show,setShow]=useState(false);
 let key=Object.keys(pic)[0];
 let question=(<div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-  <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'9px 20px'}}>{key}</h1>
+  <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'9px 20px'}}>{"kassaco"}</h1>
   <h1 className="center-align pulse" style={{textTransform:'capitalize',padding:'0px 32px'}}>{mappHindi[key]}</h1>
 </div>)
 let answer=(<div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}>
