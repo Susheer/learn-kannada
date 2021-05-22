@@ -1,51 +1,61 @@
+import UserView from "../user-view"
+import Link from "../re-useable/link"
 const Navbar = () => {
   return (
-    <>
+    <div className="container">
       <ul id="slide-out" className="sidenav">
         <li>
-          <div className="user-view">
-            <div className="background">
-              <img src="https://materializecss.com/images/office.jpg" />
+          <UserView title="Learn Kannada" email={"kannada@gmail.com"}/>
+          </li>
+        <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <Link className="collapsible-header">
+           <i class="material-icons">arrow_drop_down</i> Pratice</Link>
+            <div class="collapsible-body">
+              <ul>
+                <li><Link url="/Vowels" className="sidenav-close">Vowels</Link></li>
+                <li><Link url="/Constents" className="sidenav-close">Constents</Link></li>
+                <li><Link url="/Numbers" className="sidenav-close">Numbers</Link></li>
+              </ul>
             </div>
-            <a href="#user">
-              <img
-                alt="user name"
-                className="circle"
-                src="https://materializecss.com/images/yuna.jpg"
-              />
-            </a>
-            <a href="#name">
-              <span className="white-text name">John Doe</span>
-            </a>
-            <a href="#email">
-              <span className="white-text email">jdandturk@gmail.com</span>
-            </a>
-          </div>
+          </li>
+        </ul>
+      </li>
+        <li>
+          <Link url="/" className="sidenav-close">
+            Vowels
+          </Link>
         </li>
         <li>
-          <a href="#!">
-            <i className="material-icons">cloud</i>First Link With Icon
-          </a>
+          <Link className="sidenav-close" url="/Constents">Constents</Link>
         </li>
         <li>
-          <a href="#!">Second Link</a>
+          <Link className="sidenav-close" url="/Vowels">Vowels</Link>
+        </li>
+        <li>
+          <Link className="sidenav-close" url="/Numbers">Numbers</Link>
         </li>
         <li>
           <div className="divider"></div>
         </li>
         <li>
-          <a className="subheader">Subheader</a>
+          <Link className="sidenav-close" className="subheader">Share</Link>
         </li>
         <li>
-          <a className="waves-effect" href="#!">
-            Third Link With Waves
-          </a>
+          <Link className="sidenav-close subheader">Help</Link>
         </li>
+        <li>
+          <Link className="sidenav-close subheader" url="/">
+            About
+          </Link>
+        </li>
+
       </ul>
-      <a href="#" data-target="slide-out" className="sidenav-trigger">
-        <i className="material-icons">menu</i>
-      </a>
-    </>
+      <Link url="/" dataTarget="slide-out" className="sidenav-trigger">
+        <i className="material-icons" style={{fontSize:"34px"}}>menu</i>
+      </Link>
+    </div>
   );
 };
 
