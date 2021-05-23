@@ -4,7 +4,7 @@ function Item(props){
    const [active,setActive] =useState(false)
     let color=null;
     let cardStyle={
-        width: "70%",
+        width: "100%",
         height: "125px",
         borderRadius: "10px",
         display: "flex",
@@ -34,6 +34,11 @@ function Item(props){
           }}
           onMouseOut={()=>{
             setActive(false)
+          }}
+          onClick={()=>{
+            if(props.onClick){
+              props.onClick();
+            }
           }}
           class={cardClasses}
           style={cardStyle}
